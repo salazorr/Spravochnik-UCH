@@ -3,10 +3,7 @@
 body { 
   margin:0 15%;
   font-family: 'Mulish';
-  background-image: url(../FONindex.svg);
-  background-size: cover;
 }
-
 
 /*----------------------------------- HEADER -------------------------------------------------------------*/
 .logo{
@@ -91,6 +88,7 @@ main{
   width: 1000px;
   height: auto;
   border-radius: 70px;
+  box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.75);
 }
 
 .glav{
@@ -110,6 +108,7 @@ main{
   height: auto;
   border-radius: 70px;
   margin-top: 30px;
+  box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.75);
 }
 .smotrim-text{
   margin: 15px 25px;
@@ -162,6 +161,7 @@ main{
   padding: 30px;
   transition: 0.25s;
   cursor: pointer;
+  box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.75);
 }
 
 .cards-vibor:hover{
@@ -187,6 +187,117 @@ main{
   line-height: 20px;
   margin: 10px 0px;
 }
+
+/* list */
+.cartoch-list{
+  background-color: white;
+  width: 400px;
+  height: 400px;
+  border-radius: 60px;
+  padding: 15px;
+  position: relative;
+  box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.75);
+}
+
+.osn-nazv-list{
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.nazv-list{
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  height: auto;
+  text-align: center;
+}
+
+.foto{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.fotoo{
+  border-radius: 10px 51px 10px 10px;
+}
+
+.osn-coctent-card{
+  width: 205px;
+  height: auto;
+  text-align: center;
+}
+
+.plusi{
+  margin-top: 5px;
+}
+
+.plus-list{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 3px;
+}
+
+.plus-list-png{
+  width: 25px;
+  height: 25px;
+}
+
+.plaus-list-words{
+  margin: 0;
+  width: 155px;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.parametr-card{
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.par{
+  margin: 0;
+  margin-top: 10px;
+}
+
+button{
+  background-color: black;
+  color: white;
+  width: 200px;
+  height: 55px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Mulish';
+  border: 0;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+button:hover{
+  transform: scale(1.05);
+}
+
+.butt{
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
