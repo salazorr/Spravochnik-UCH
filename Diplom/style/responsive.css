@@ -1,0 +1,347 @@
+@media (max-width: 1200px) {
+    body {
+      margin: 0 10%;
+    }
+  
+    .inf {
+      width: 800px;
+    }
+  
+    .cards-main {
+      width: 115%;
+    }
+  
+    .cards-vibor {
+      width: 380px;
+      height: 500px;
+      margin-top: 65px;
+    }
+  
+    .card-name {
+      font-size: 36px;
+    }
+  
+    .card-zav {
+      font-size: 26px;
+      line-height: 30px;
+    }
+  
+    .card-usl {
+      font-size: 16px;
+      line-height: 18px;
+    }
+    .arrow{
+        margin-top: -255px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    body {
+      margin: 0 5%;
+    }
+  
+    .inf {
+      width: 600px;
+      font-size: 22px;
+    }
+  
+    .inftext {
+      margin: 20px 30px;
+    }
+  
+    .smotrim {
+      width: 300px;
+      font-size: 36px;
+    }
+  
+    .cards-main {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .cards-vibor {
+      width: 420px;
+      height: 525px;
+      margin-top: 50px;
+    }
+    .arrow{
+        display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+
+  
+    .dop {
+      font-size: 30px;
+      margin: 18px 0 0 15px;
+    }
+
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-right {
+      width: 250px;
+    }
+  
+    input#search-bar {
+      width: 250px;
+      font-size: 16px;
+      margin-top: 15px;
+    }
+  
+    .search-icon {
+      width: 18px;
+      height: 18px;
+      top: -26px;
+    }
+  
+    .inf {
+      width: 500px;
+      font-size: 20px;
+    }
+  
+    .inftext {
+      margin: 15px 25px;
+    }
+  
+    .smotrim {
+      width: 250px;
+      font-size: 32px;
+    }
+  
+    .smotrim-text {
+      margin: 12px 20px;
+    }
+  
+    .cards-vibor {
+      width: 380px;
+      height: 475px;
+    }
+  
+    .card-name {
+      font-size: 32px;
+    }
+  
+    .card-zav {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  
+    .card-usl {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    body {
+      margin: 0 3%;
+    }
+  
+    .dop {
+      font-size: 24px;
+      margin: 14px 0 0 12px;
+    }
+  
+    .header-right {
+      display: contents;
+    }
+  
+    .search-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+      }
+    
+      input#search-bar {
+        width: 100%;
+        height: 35px;
+        font-size: 14px;
+        padding: 0 30px 0 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+      }
+    
+      input#search-bar::placeholder{
+        font-size: 0px;
+      }
+
+    .search-icon{
+        top: 7px;
+        right: 30px;
+    }
+  
+    .inf {
+      width: 400px;
+      font-size: 18px;
+      border-radius: 50px;
+    }
+  
+    .inftext {
+      margin: 12px 20px;
+    }
+  
+    .smotrim {
+      width: 220px;
+      font-size: 28px;
+      border-radius: 50px;
+    }
+  
+    .smotrim-text {
+      margin: 10px 16px;
+    }
+  
+    .cards-vibor {
+      width: 320px;
+      height: 425px;
+    }
+  
+    .card-name {
+      font-size: 28px;
+    }
+  
+    .card-zav {
+      font-size: 22px;
+      line-height: 26px;
+    }
+  
+    .card-usl {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+  
+    .dop {
+      font-size: 20px;
+      margin: 10px 0 0 10px;
+    }
+  
+    .header-right {
+      display: contents;
+    }
+  
+    .search-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+      }
+    
+      input#search-bar {
+        width: 100%;
+        height: 35px;
+        font-size: 14px;
+        padding: 0 30px 0 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+      }
+    
+      input#search-bar::placeholder{
+        font-size: 0px;
+      }
+    
+  
+    .inf {
+      width: 320px;
+      font-size: 16px;
+      border-radius: 40px;
+    }
+  
+    .inftext {
+      margin: 10px 16px;
+    }
+  
+    .smotrim {
+      width: 180px;
+      font-size: 24px;
+      border-radius: 40px;
+    }
+  
+    .smotrim-text {
+      margin: 8px 12px;
+    }
+  
+    .cards-vibor {
+      width: 280px;
+      height: 375px;
+    }
+  
+    .card-name {
+      font-size: 24px;
+    }
+  
+    .card-zav {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  
+    .card-usl {
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+
+  @media (max-width: 375px) {
+  
+    .dop {
+      font-size: 18px;
+      margin: 8px 0 0 8px;
+    }
+  
+    .header-right {
+        display: contents;
+    }
+  
+    input#search-bar {
+        height: 18px;
+        padding-top: 12px;
+        font-size: 6px;
+      }
+  
+    .inf {
+      width: 280px;
+      font-size: 14px;
+      border-radius: 30px;
+    }
+  
+    .inftext {
+      margin: 8px 12px;
+    }
+  
+    .smotrim {
+      width: 160px;
+      font-size: 20px;
+      border-radius: 30px;
+    }
+  
+    .smotrim-text {
+      margin: 6px 10px;
+    }
+  
+    .cards-vibor {
+      width: 240px;
+      height: 325px;
+    }
+  
+    .card-name {
+      font-size: 20px;
+    }
+  
+    .card-zav {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  
+    .card-usl {
+      font-size: 8px;
+      line-height: 10px;
+    }
+  }
