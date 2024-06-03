@@ -3,12 +3,19 @@
 
 body { 
   font-family: 'Mulish';
-  
+  margin: 0;
 }
 
 a{
   text-decoration: none;
   color: #000;
+}
+
+th{
+  font-size: 20px;
+}
+td{
+  font-size: 16px;
 }
 
 /*----------------------------------- HEADER -------------------------------------------------------------*/
@@ -33,16 +40,15 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  margin-bottom: 25px;
   align-items: center;
-  margin:0 15%;
+  margin:0 15% 25px 15%;
 }
 
 .header-right {
   float: right;
-  display: inline;
+  display: ruby;
   width: 290px;
-  height: 25px;
+  height: 8px;
 } 
 
 
@@ -58,7 +64,7 @@ input#search-bar{
   font-family: 'Mulish';
   width: 100%;
   height: 35px;
-  padding: 0 30px 0 10px;
+  padding: 0 35px 0 10px;
   border: 1px solid #ccc;
   border-radius: 20px;
 }
@@ -75,6 +81,10 @@ input#search-bar:focus{
   top: -27px;
   right: -30px;
   opacity: 0.35;
+}
+
+.search-container{
+  position: relative;
 }
 
 
@@ -117,7 +127,7 @@ main{
 
 .smotrim{
   background-color: rgb(255 255 255 / 30%);
-
+  backdrop-filter: blur(10px);
   text-align: center;
   font-size: 40px;
   font-weight: 300;
@@ -137,7 +147,7 @@ main{
   width: 40px;
   height: 40px;
   position: absolute; /* don't forget set container to relative */
-  margin-top: -290px;
+  margin-top: -300px;
   z-index:999;
 }
 /* set arrow styles */
@@ -164,8 +174,8 @@ main{
 /*--------------------- карты --------------------*/
 .cards-main{
   display: flex;
-  width: 80%;
-  justify-content: space-between;
+  width: 90%;
+  justify-content: center;
   margin-bottom: 100px;
 }
 
@@ -174,7 +184,7 @@ main{
   width: 420px;
   height: 525px;
   border-radius: 60px;
-  margin: 150px 20px 0px 20px;
+  margin: 80px 20px 0px 20px;
   padding: 30px;
   transition: 0.25s;
   cursor: pointer;
@@ -208,7 +218,7 @@ main{
 /* -------------------------------------------------list--------------------------------------------- */
 .list-card{
   display: grid; 
-  grid-template-columns: repeat(auto-fill, 500px); 
+  grid-template-columns: repeat(auto-fill, 450px); 
   justify-content: center;
   justify-items: center;
   
@@ -317,8 +327,8 @@ button:hover{
 /* INFZAV */
 
 .infglav{
-  width: 1330px;
-  height: 1115px;
+  width: 75%;
+  height: auto;
   background-color: rgb(255 255 255 / 30%);
   backdrop-filter: blur(10px);
   box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.75);
@@ -355,6 +365,7 @@ button:hover{
   width: auto;
   text-align: left;
   padding-left: 10px;
+  font-size: 16px;
 }
 
 .priem-list{
@@ -367,6 +378,18 @@ button:hover{
 .priem-list-png{
   width: 30px;
   height: 30px;
+}
+
+.infglav-plus-list{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 3px;
+}
+
+.infglav-plus-list-png{
+  width: 25px;
+  height: 25px;
 }
 
 .infglav-foto{
