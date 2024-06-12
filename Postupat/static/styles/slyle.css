@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+body { 
+  font-family: 'Mulish';
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+th{
+  font-size: 20px;
+}
+td{
+  font-size: 16px;
+}
+
+/*----------------------------------- HEADER -------------------------------------------------------------*/
+.logo{
+  width: 180px;
+  height: 67px;
+  z-index: 100;
+} 
+
+.dop{
+  font-weight: 200;
+  font-size: 36px;
+  margin: 23px 0 0 20px;
+}
+
+.logo-dop{
+  display: flex;
+  align-items: flex-end;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  margin:0 15% 25px 15%;
+}
+
+.header-right {
+  float: right;
+  display: ruby;
+  width: 290px;
+  height: 8px;
+} 
+
+
+input#search-bar{
+  margin: 0 auto;
+  padding-top: 25px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px dashed;
+  margin-bottom: -1px;
+  background: none;
+  opacity: 0.55;
+  font-family: 'Mulish';
+  width: 100%;
+  height: 35px;
+  padding: 0 35px 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+input#search-bar:focus{
+  outline: none !important;
+}
+
+.search-icon{
+  position: relative;
+  float: right;
+  width: 20px;
+  height: 20px;
+  top: -27px;
+  right: -30px;
+  opacity: 0.35;
+}
+
+.search-container{
+  position: relative;
+}
+
+
+/*-------------------------------------------------- MAIN --------------------------------------------------*/
+main{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-index{
+  margin: 0% 15%;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inf{
+  background-color: rgb(255 255 255 / 30%);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  font-size: 26px;
+  font-weight: 400;
+  width: 1000px;
+  height: auto;
+  border-radius: 70px;
+  box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.75);
+}
+
+.glav{
+  font-weight: 600;
+}
+.inftext{
+  margin: 30px 40px;
+}
+
+.smotrim{
+  background-color: rgb(255 255 255 / 30%);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  font-size: 40px;
+  font-weight: 300;
+  width: 360px;
+  height: auto;
+  border-radius: 70px;
+  margin-top: 30px;
+  box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.75);
+}
+.smotrim-text{
+  margin: 15px 25px;
+}
+
+
+/*--------------- стелка -------------------*/
+.arrow {
+  width: 40px;
+  height: 40px;
+  position: absolute; /* don't forget set container to relative */
+  margin-top: -300px;
+  z-index:999;
+}
+/* set arrow styles */
+.arrow path {
+  stroke: grey;
+  stroke-width: 2px;
+  fill: transparent;  
+  animation: down 2s infinite;
+}
+/* arrow keyframe animation */
+@keyframes down{
+0% { opacity:0 }
+25% { opacity:1 }
+75% { opacity:0 }
+100% { opacity:0 }
+}
+
+/* arrow animation delay */
+.arrow path.a1{ animation-delay: -1s; }
+.arrow path.a2{ animation-delay:-.5s; }
+.arrow path.a3{ animation-delay: 0s; }
+
+
+/*--------------------- карты --------------------*/
+.cards-main{
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.cards-vibor{
+  background-color: white;
+  width: 420px;
+  height: 525px;
+  border-radius: 60px;
+  margin: 80px 20px 0px 20px;
+  padding: 30px;
+  transition: 0.25s;
+  cursor: pointer;
+  box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.75);
+}
+
+.cards-vibor:hover{
+  transform: scale(1.05);
+}
+
+.card-name{
+  margin: 0;
+  font-size: 40px;
+  color: #8F79FF;
+  font-weight: 700;
+}
+
+.card-zav{
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.card-usl{
+  font-weight: 700;
+  font-size: 18.75px;
+  line-height: 20px;
+  margin: 10px 0px;
+}
+
+/* -------------------------------------------------list--------------------------------------------- */
+.list-card{
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, 450px); 
+  justify-content: center;
+  justify-items: center;
+  
+}
+.cartoch-list{
+  background-color: white;
+  width: 400px;
+  height: 400px;
+  border-radius: 60px;
+  padding: 15px;
+  position: relative;
+  box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.75);
+  margin: 20px;
+}
+
+.osn-nazv-list{
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.nazv-list{
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  height: auto;
+  text-align: center;
+}
+
+.foto{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.fotoo{
+  border-radius: 10px 51px 10px 10px;
+  width: 200px;
+  height: 215px;
+}
+
+.osn-coctent-card{
+  width: 205px;
+  height: auto;
+  text-align: center;
+}
+
+.plusi{
+  margin-top: 5px;
+}
+
+.plus-list{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 3px;
+}
+
+.plus-list-png{
+  width: 25px;
+  height: 25px;
+}
+
+.plaus-list-words{
+  margin: 0;
+  width: 155px;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.parametr-card{
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.par{
+  margin: 0;
+  margin-top: 10px;
+}
+
+button{
+  background-color: black;
+  color: white;
+  width: 200px;
+  height: 55px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Mulish';
+  border: 0;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+button:hover{
+  transform: scale(1.05);
+}
+
+.butt{
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* INFZAV */
+
+.infglav{
+  width: 75%;
+  height: auto;
+  background-color: rgb(255 255 255 / 30%);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.75);
+  border-radius: 70px;
+  padding: 30px 30px 60px 30px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.infglav-inf{
+  width: 655px;
+  height: auto;
+}
+
+.infglav-inf-name{
+  font-size: 48px;
+  font-weight: 700;
+  text-align: start;
+  margin: 0;
+}
+
+.infglav-inf-plus{
+  display: flex;
+}
+
+.infglav-inf-priem{
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.priem-list-words{
+  margin: 0;
+  width: auto;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.priem-list{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.priem-list-png{
+  width: 30px;
+  height: 30px;
+}
+
+.infglav-plus-list{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 3px;
+}
+
+.infglav-plus-list-png{
+  width: 25px;
+  height: 25px;
+}
+
+.infglav-foto{
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+
+.infglav-fotoo{
+  width: 340px;
+  height: 410px;
+  border-radius: 40px;
+}
+
+.spec-infglav{
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+
+table {
+  font-family: "Mulish";
+  font-size: 16px;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  margin-bottom: 30px;
+}
+th {
+  font-weight: 600;
+  font-size: 20px;
+  color: #000;
+  border-bottom: 2px solid #000;
+  padding: 10px 8px;
+}
+td {
+  border-bottom: 1px solid #000;
+  color: #000;
+  padding: 7px 5px;
+}
+
+.mest{
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+

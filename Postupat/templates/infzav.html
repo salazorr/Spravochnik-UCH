@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles/slyle.css' %}">
+    <link rel="stylesheet" href="{%  static 'styles/responsive.css' %}">
+    <script src="{% static 'scripts/js.js' %}"></script>
+    <title>А КУДА ПОСТУПАТЬ?</title>
+</head>
+<body style="background-image: url({% static 'images/FONinfzav.svg' %});
+background-size: cover;">
+  <header>
+    <div class="logo-dop">
+        <a href="/" class="logo">
+            <img src="{% static 'images/logopostupat.svg' %}" alt="">
+        </a>
+        <p class="dop">РНД</p>
+    </div>
+    <div class="header-right">
+      <form class="search-container">
+        <input type="text" id="search-bar" placeholder="Ищите что то определенное?">
+        <a href="#"><img class="search-icon" src="{% static 'images/search-icon.png' %}"></a>
+      </form>
+    </div>
+  </header>
+  <main>
+    <div class="infglav">
+        <div class="infglav-inf">
+            <div class="infglav-foto">
+                <img class="infglav-fotoo" src="{% static 'images/FOTO.jpg' %}" alt="">
+            </div>
+            <p class="infglav-inf-name">
+                {{ university.name }}
+            </p>
+            <div class="infglav-inf-plus">
+                {% for plus in university.list_of_pluses.all %}
+                <div class="plus-list">
+                    <img src="{% static 'images/Done.png' %}" alt="" class="plus-list-png">
+                    <p class="plaus-list-words">{{ plus.name }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            <p class="infglav-inf-priem">
+                Приемная комиссия РКСИ
+            </p>
+            <div class="infglav-inf-priem-inf">
+                <div class="priem-list">
+                    <img src="{% static 'images/Website.png' %}" alt="" class="priem-list-png">
+                    <p class="priem-list-words">{{ university.contacts.site_url }}</p>
+                </div>
+                <div class="priem-list">
+                    <img src="{% static 'images/Map Marker.png' %}" alt="" class="priem-list-png">
+                    <p class="priem-list-words">{{ university.contacts.address }}</p>
+                </div>
+                <div class="priem-list">
+                    <img src="{% static 'images/Schedule.png' %}" alt="" class="priem-list-png">
+                    <p class="priem-list-words"><b>Режим работы:</b>{{ university.contacts.time_table }}</p>
+                </div>
+                <div class="priem-list">
+                    <img src="{% static 'images/Phone.png' %}" alt="" class="priem-list-png">
+                    <p class="priem-list-words"><b>{{ university.contacts.number }}</b></p>
+                </div>
+            </div>
+        </div>
+        <p class="spec-infglav">
+            Специальности
+        </p>
+        <table>
+            <tr>
+                <th>Специальность</th>
+                <th>Квалификация</th>
+                <th>Стоимость</th>
+                <th class="mest">Мест на бюджет</th>
+                <th>Время обучения</th>
+            </tr>
+            {% for speciality in university.specialities.all %}
+                <tr>
+                    <td>{{ speciality.name }}</td>
+                    <td>{{ speciality.qualification }}</td>
+                    <td>{{ speciality.cost }}₽ в год</td>
+                    <td class="mest">{{ speciality.places }}</td>
+                    <td>{{ speciality.years_of_studying }} года {{ speciality.months_of_studying }} месяцев</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+  </main>

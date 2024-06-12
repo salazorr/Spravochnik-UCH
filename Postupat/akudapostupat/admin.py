@@ -1,13 +1,12 @@
 from django.contrib import admin
-from .models import EducationalInstitution
-from .models import Specialty
-from .models import Contact
+from .models import Category, Contacts, Specialities, University, Pluses
 
+class UniversityAdmin(admin.ModelAdmin):
+    filter_horizontal = ['specialities', 'list_of_pluses']
 
-class akudapostupatAdmin(admin.ModelAdmin):
-    list_display = ('id', 'short_name')
+admin.site.register(Category)
+admin.site.register(Contacts)
+admin.site.register(Specialities)
+admin.site.register(University, UniversityAdmin)
+admin.site.register(Pluses)
 
-
-admin.site.register(EducationalInstitution, akudapostupatAdmin)
-# admin.site.register(Specialty)
-# admin.site.register(Contact)
