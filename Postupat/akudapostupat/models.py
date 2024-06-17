@@ -70,6 +70,7 @@ class University(models.Model):
     amount_of_specialities = models.IntegerField(blank=False, null=False, default=0)
     contacts = models.OneToOneField(Contacts, related_name="contacts", on_delete=models.SET_NULL, null=True, blank=True)
     specialities = models.ManyToManyField(Specialities, related_name='specialities', blank=True)
+    image = models.ImageField(upload_to='university_images/', blank=True, null=True)
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
 
