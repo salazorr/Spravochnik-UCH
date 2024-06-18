@@ -87,7 +87,9 @@ input#search-bar:focus{
   position: relative;
 }
 
-
+.search-button{
+  display: contents;
+}
 /*-------------------------------------------------- MAIN --------------------------------------------------*/
 main{
   display: flex;
@@ -206,6 +208,7 @@ main{
   font-weight: 700;
   font-size: 30px;
   line-height: 35px;
+  width: min-content;
 }
 
 .card-usl{
