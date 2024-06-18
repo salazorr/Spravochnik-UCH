@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="shortcut icon" href="{%  static 'images/logo.png' %}">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'styles/slyle1.css' %}">
-    <link rel="stylesheet" href="{%  static 'styles/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/slyle11.css' %}">
+    <link rel="stylesheet" href="{%  static 'styles/responsive1.css' %}">
     <script src="{% static 'scripts/js.js' %}"></script>
     <title>А КУДА ПОСТУПАТЬ?</title>
 </head>
@@ -22,10 +22,12 @@ background-size: cover;">
       <p class="dop">РНД</p>
     </div>
     <div class="header-right">
-      <form class="search-container">
-        <input type="text" id="search-bar" placeholder="Ищите что то определенное?">
-        <a href="#"><img class="search-icon" src="{% static 'images/search-icon.png' %}"></a>
-      </form>
+      <form class="search-container" method="GET" action="{% url 'search' %}">
+        <input type="text" id="search-bar" name="q" placeholder="Ищите что-то определенное?">
+        <button class="search-button" type="submit">
+            <img class="search-icon" src="{% static 'images/search-icon.png' %}">
+        </button>
+    </form>
     </div>
   </header>
   <main class="main-index">
