@@ -33,3 +33,16 @@ def list(request, category_name):
     }
 
     return render(request, 'list.html', context)
+
+def search(request):
+    query = request.GET.get('q')
+    if query:
+        results = University.objects.filter(shortName__iregex=query)
+    else:
+        results = University.objects.none()
+    
+    context = {
+        'universities': results,
+        'category_name': 'Поиск'
+    }
+    return render(request, 'list.html', context)
