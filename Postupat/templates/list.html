@@ -24,7 +24,7 @@ background-size: cover;">
     </div>
     <div class="header-right">
         <form class="search-container" method="GET" action="{% url 'search' %}">
-            <input type="text" id="search-bar" name="q" placeholder="Ищите что-то определенное?">
+            <input type="text" id="search-bar" name="q" placeholder="Ищите что-то определенное?" value="{{ query|default:'' }}">
             <button class="search-button" type="submit">
                 <img class="search-icon" src="{% static 'images/search-icon.png' %}">
             </button>
@@ -33,47 +33,98 @@ background-size: cover;">
   </header>
   <main class="list-card">
     <button id="scrollToTopButton" style="display: none; position: fixed; bottom: 20px; right: 20px;">Наверх</button>
-    {% for university in universities %}
-        <div class="cartoch-list">
-            <div class="osn-coctent-card">
-                <p class="osn-nazv-list">{{ university.shortName }}</p>
-                <p class="nazv-list">{{ university.name }}</p>
-                <div class="plusi">
-                    {% for plus in university.list_of_pluses.all %}
-                    <div class="plus-list">
-                        <img src="{% static 'images/Done.png' %}" alt="" class="plus-list-png">
-                        <p class="plaus-list-words">{{ plus.name }}</p>
+    {% if query %}
+        {% for university in universities %}
+            <div class="cartoch-list">
+                <div class="osn-coctent-card">
+                    <p class="osn-nazv-list">{{ university.shortName }}</p>
+                    <p class="nazv-list">{{ university.name }}</p>
+                    <div class="plusi">
+                        {% for plus in university.list_of_pluses.all %}
+                        <div class="plus-list">
+                            <img src="{% static 'images/Done.png' %}" alt="" class="plus-list-png">
+                            <p class="plaus-list-words">{{ plus.name }}</p>
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
+                </div>
+                <div class="foto">
+                    {% if university.image %}
+                        <img class="fotoo" src="{{ university.image.url }}" alt="{{ university.name }}">
+                    {% else %}
+                        <img class="fotoo" src="{% static 'images/FOTO.png' %}" alt="Заглушка">
+                    {% endif %}
+                </div>
+                <div class="parametr-card">
+                    <p class="par">
+                        Бюджетных мест - {{ university.places }}
+                    </p>
+                    <p class="par">
+                        Средний аттестат - {{ university.score }}
+                    </p>
+                    <p class="par">
+                        Специальностей - {{ university.amount_of_specialities }}
+                    </p>
+                </div>
+                <div class="butt">
+                    <form action="/infzav/{{ university.name }}">
+                        <button class='more'>
+                            Узнать больше
+                        </button>
+                    </form>
                 </div>
             </div>
-            <div class="foto">
-                {% if university.image %}
-                    <img class="fotoo" src="{{ university.image.url }}" alt="{{ university.name }}">
-                {% else %}
-                    <img class="fotoo" src="{% static 'images/FOTO.png' %}" alt="Заглушка">
-                {% endif %}
-            </div>
-            <div class="parametr-card">
-                <p class="par">
-                    Бюджетных мест - {{ university.places }}
-                </p>
-                <p class="par">
-                    Средний аттестат - {{ university.score }}
-                </p>
-                <p class="par">
-                    Специальностей - {{ university.amount_of_specialities }}
-                </p>
-            </div>
-            <div class="butt">
-                <form action="/infzav/{{ university.name }}">
-                    <button class='more'>
-                        Узнать больше
-                    </button>
-                </form>
-            </div>
-        </div>
-    {% empty %}
-        <p>Результаты не найдены</p>
-    {% endfor %}
-</main>
+        {% empty %}
+            <p>Результаты не найдены</p>
+        {% endfor %}
+    {% else %}
+        {% for university in universities %}
+            {% if university.type.name == category_name %}
+                <div class="cartoch-list">
+                    <div class="osn-coctent-card">
+                        <p class="osn-nazv-list">{{ university.shortName }}</p>
+                        <p class="nazv-list">{{ university.name }}</p>
+                        <div class="plusi">
+                            {% for plus in university.list_of_pluses.all %}
+                            <div class="plus-list">
+                                <img src="{% static 'images/Done.png' %}" alt="" class="plus-list-png">
+                                <p class="plaus-list-words">{{ plus.name }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="foto">
+                        {% if university.image %}
+                            <img class="fotoo" src="{{ university.image.url }}" alt="{{ university.name }}">
+                        {% else %}
+                            <img class="fotoo" src="{% static 'images/FOTO.png' %}" alt="Заглушка">
+                        {% endif %}
+                    </div>
+                    <div class="parametr-card">
+                        <p class="par">
+                            Бюджетных мест - {{ university.places }}
+                        </p>
+                        <p class="par">
+                            Средний аттестат - {{ university.score }}
+                        </p>
+                        <p class="par">
+                            Специальностей - {{ university.amount_of_specialities }}
+                        </p>
+                    </div>
+                    <div class="butt">
+                        <form action="/infzav/{{ university.name }}">
+                            <button class='more'>
+                                Узнать больше
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+        {% if not universities %}
+            <p>Нет университетов в данной категории</p>
+        {% endif %}
+    {% endif %}
+  </main>
+</body>
+</html>
